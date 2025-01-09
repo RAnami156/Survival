@@ -3,11 +3,13 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 @export var inv: Inv
 
-var speed = 250
+var speed = 125
 var player_state
 
 
 func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("1"):
+		speed = 250
 	var direction = Input.get_vector("left", "right", "up","down")
 	
 	if direction.x== 0 and direction.y == 0 :
@@ -44,6 +46,6 @@ func play_anim(dir):
 			
 func player():
 	pass
-	
-	
-	
+
+func collect(item):
+	inv.insert(item)

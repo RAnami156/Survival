@@ -2,9 +2,12 @@ extends Node2D
 
 @onready var anim = $AnimatedSprite2D
 @onready var timer = $growth_timer
+@export var item: InvItem
+
 var state = "no apples"
 var player_in_area = false
 var apple = preload("res://scene/apple_collectable.tscn")
+var player = null
 
 func _ready() -> void:
 	timer.wait_time = 3  # Устанавливаем таймер на 10 секунд
@@ -22,6 +25,7 @@ func _process(delta: float) -> void:
 func _on_pickable_area_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_in_area = true
+		player = body
 
 func _on_pickable_area_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
@@ -35,4 +39,5 @@ func drop_apple() -> void:
 	var apple_instance = apple.instantiate()
 	apple_instance.global_position = $Marker2D.global_position
 	get_parent().add_child(apple_instance)
+	player.collect(item)
 	timer.start()  # Перезапуск таймера
