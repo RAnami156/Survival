@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dc3qi06ggg7if"]
+[gd_scene load_steps=14 format=3 uid="uid://dc3qi06ggg7if"]
 
 [ext_resource type="Script" path="res://scene/world.gd" id="1_21320"]
 [ext_resource type="PackedScene" uid="uid://brm4ut0o63rsl" path="res://scene/player.tscn" id="1_l8btt"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bt3bgptysbsqu" path="res://art/survivalgame-terrian-cliffs.png" id="3_vvnb8"]
 [ext_resource type="Texture2D" uid="uid://bsw4bk1f721ir" path="res://art/survivalgame-trees.png" id="4_3fe1e"]
 [ext_resource type="Texture2D" uid="uid://ifg30wim5xmj" path="res://art/survivalgame-terrian-water.png" id="5_f6xve"]
+[ext_resource type="PackedScene" uid="uid://rscw023ejlye" path="res://scene/stick_coll.tscn" id="8_5prml"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7sf7u"]
 texture = ExtResource("2_uhyp1")
@@ -264,6 +265,7 @@ script = ExtResource("1_21320")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
+limit_smoothed = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_n8da2")
@@ -279,3 +281,21 @@ layer_2/tile_data = PackedInt32Array(-393223, 1114114, 0, -262148, 1114114, 0, -
 
 [node name="apple_tree" parent="." instance=ExtResource("2_t3d8q")]
 position = Vector2(109, -39)
+
+[node name="apple_tree2" parent="." instance=ExtResource("2_t3d8q")]
+position = Vector2(74, 137)
+
+[node name="stick_coll5" parent="." instance=ExtResource("8_5prml")]
+position = Vector2(149, 187)
+
+[node name="stick_coll4" parent="." instance=ExtResource("8_5prml")]
+position = Vector2(17, 79)
+
+[node name="stick_coll3" parent="." instance=ExtResource("8_5prml")]
+position = Vector2(-132, 100)
+
+[node name="stick_coll2" parent="." instance=ExtResource("8_5prml")]
+position = Vector2(-48, 175)
+
+[node name="stick_coll" parent="." instance=ExtResource("8_5prml")]
+position = Vector2(118, 67)

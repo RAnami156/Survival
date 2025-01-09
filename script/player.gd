@@ -8,8 +8,10 @@ var player_state
 
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("1"):
-		speed = 250
+	if Input.is_action_pressed("run"):
+		speed = 250 
+	else:
+		speed = 125
 	var direction = Input.get_vector("left", "right", "up","down")
 	
 	if direction.x== 0 and direction.y == 0 :
