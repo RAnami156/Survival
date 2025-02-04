@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://ca2fscpkptvxl" path="res://inventory/inv_ua_slots.tscn" id="3_sm3j4"]
 
 [node name="Inv_ua" type="Control"]
+z_index = 2
+y_sort_enabled = true
 custom_minimum_size = Vector2(83, 64)
 layout_mode = 3
 anchors_preset = 15

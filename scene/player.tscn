@@ -329,6 +329,12 @@ radius = 4.0
 script = ExtResource("1_epyfd")
 inv = ExtResource("2_7pkj6")
 
+[node name="Inv_ua" parent="." instance=ExtResource("4_f4kv0")]
+offset_left = -41.0
+offset_top = -74.0
+offset_right = 42.0
+offset_bottom = -10.0
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5dy4v")
 animation = &"N-attack"
@@ -343,11 +349,5 @@ limit_left = -600
 limit_top = -360
 limit_right = 400
 limit_bottom = 480
-
-[node name="Inv_ua" parent="." instance=ExtResource("4_f4kv0")]
-offset_left = -41.0
-offset_top = -74.0
-offset_right = 42.0
-offset_bottom = -10.0
 
 [node name="Marker2D" type="Marker2D" parent="."]
